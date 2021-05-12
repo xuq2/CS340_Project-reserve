@@ -1,0 +1,96 @@
+<div class="container">
+  <h2>Tickets</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="movie-auditorium-id" class="form-label mx-2">movie auditorium id</label>
+        <input id="movie-auditorium-id" type="number" class="form-control" name="movieId">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="customer-id" class="form-label mx-2">customer id</label>
+        <input id="customer-id" type="number" class="form-control" name="customerId">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="seat" class="form-label mx-2">seat</label>
+        <input id="seat" type="text" class="form-control" name="seat" placeholder="A17">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="time" class="form-label mx-2">time</label>
+        <input id="time" type="datetime-local" class="form-control" name="time">
+      </div>
+      <div>
+        <input class="btn btn-primary" type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected>Search By</option>
+          <option value="movieName">movies.name</option>
+          <option value="auditoriumName">auditoriums.name</option>
+          <option value="customerName">customers.name</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ticket_id</th>
+        <th scope="col">movies.name</th>
+        <th scope="col">auditoriums.name</th>
+        <th scope="col">customers.name</th>
+        <th scope="col">seat</th>
+        <th scope="col">time</th>
+        <th scope="col">price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Star Wars</td>
+        <td>Red</td>
+        <td>Batman</td>
+        <td>A19</td>
+        <td>2021-08-01-14:00</td>
+        <td>250</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jurassic Park</td>
+        <td>Blue</td>
+        <td>Superman</td>
+        <td>G17</td>
+        <td>2020-05-06-14:00</td>
+        <td>400</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>The Godfather</td>
+        <td>Green</td>
+        <td></td>
+        <td>H21</td>
+        <td>2020-06-24-11:00</td>
+        <td>250</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

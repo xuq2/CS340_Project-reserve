@@ -1,0 +1,63 @@
+<div class="container">
+  <h2>Projector Equipments</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="type" class="form-label mx-2">type</label>
+        <input id="type" type="text" class="form-control" name="type">
+      </div>
+      <div>
+        <input class="btn btn-primary " type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected value="projectorEquipmentId">Search By</option>
+          <option value="type">type</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">projector_equipment_id</th>
+        <th scope="col">type</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">1</th>
+        <td>Digital</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>IMAX</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>3D</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

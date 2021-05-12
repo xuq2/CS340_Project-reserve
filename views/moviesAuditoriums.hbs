@@ -1,0 +1,259 @@
+{{!-- Movies Table --}}
+<div class="container">
+  <h2>Movies</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="movie-name" class="form-label mx-2">name</label>
+        <input id="movie-name" type="text" class="form-control" name="name" placeholder="movie name">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="release-date" class="form-label mx-2">release date</label>
+        <input id="release-date" type="date" class="form-control" name="releaseDate">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="out-of-theater-date" class="form-label mx-2">out of theater date</label>
+        <input id="out-of-theater-date" type="date" class="form-control" name="outOfTheaterDate">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="rating" class="form-label mx-2">rating</label>
+        <input id="rating" type="text" class="form-control" name="rating" placeholder="PG">
+      </div>
+      <div>
+        <input class="btn btn-primary" type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected>Search By</option>
+          <option value="movieName">name</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">movie_id</th>
+        <th scope="col">name</th>
+        <th scope="col">release_date</th>
+        <th scope="col">out_of_theater_date</th>
+        <th scope="col">rating</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Star Wars</td>
+        <td>1977-06-06</td>
+        <td>1977-11-11</td>
+        <td>G</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jurassic Park</td>
+        <td>1993-07-07</td>
+        <td>1993-12-01</td>
+        <td>PG</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>The Godfather</td>
+        <td>1972-05-01</td>
+        <td>1972-10-01</td>
+        <td>PG-13</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{!-- Auditoriums --}}
+<div class="container">
+  <h2>Auditoriums</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="auditorium-name" class="form-label mx-2">name</label>
+        <input id="auditorium-name" type="text" class="form-control" name="name" placeholder="auditorium name">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="number-of-seats" class="form-label mx-2">number of seats</label>
+        <input id="number-of-seats" type="number" class="form-control" name="seats" placeholder="200">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="theater-id" class="form-label mx-2">theater id</label>
+        <input id="theater-id" type="number" class="form-control" name="theaterId">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="projector-id" class="form-label mx-2">projector id</label>
+        <input id="projector-id" type="number" class="form-control" name="projectorId">
+      </div>
+      <div>
+        <input class="btn btn-primary" type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected>Search By</option>
+          <option value="auditoriumName">auditoriums.name</option>
+          <option value="theaterName">theaters.name</option>
+          <option value="projectorType">projector_equipments.type</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">auditorium_id</th>
+        <th scope="col">auditoriums.name</th>
+        <th scope="col">number_of_seats</th>
+        <th scope="col">theaters.name</th>
+        <th scope="col">projector_equipments.type</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Red</td>
+        <td>200</td>
+        <td>Amazing Century</td>
+        <td>Digital</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Blue</td>
+        <td>150</td>
+        <td>Amazing Century</td>
+        <td>IMAX</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Green</td>
+        <td>250</td>
+        <td>Amazing Century</td>
+        <td>3D</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{!-- Movies_Auditoriums Table --}}
+<div class="container">
+  <h2>Movies Auditoriums</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="movie-id" class="form-label mx-2">movie id</label>
+        <input id="movie-id" type="number" class="form-control" name="movieId">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="auditorium-id" class="form-label mx-2">auditorium id</label>
+        <input id="auditorium-id" type="number" class="form-control" name="auditoriumId">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="time-slot" class="form-label mx-2">time slot</label>
+        <input id="time-slot" type="time" class="form-control" name="timeSlot">
+      </div>
+      <div>
+        <input class="btn btn-primary" type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected>Search By</option>
+          <option value="movieName">movies.name</option>
+          <option value="auditoriumName">auditoriums.name</option>
+          <option value="timeSlot">time_slot</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">movie_auditorium_id</th>
+        <th scope="col">movies.name</th>
+        <th scope="col">auditoriums.name</th>
+        <th scope="col">time_slot</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Star Wars</td>
+        <td>Red</td>
+        <td>14:30</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jurassic Park</td>
+        <td>Blue</td>
+        <td>08:30</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>The Godfather</td>
+        <td>Green</td>
+        <td>10:00</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

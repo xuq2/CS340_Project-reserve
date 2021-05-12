@@ -1,0 +1,79 @@
+<div class="container">
+  <h2>Customers</h2>
+  {{!-- Form --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group mb-3 align-items-center">
+        <label for="name" class="form-label mx-2">name</label>
+        <input id="name" type="text" class="form-control" name="name">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="email" class="form-label mx-2">email</label>
+        <input id="email" type="email" class="form-control" name="email" placeholder="name@example.com">
+      </div>
+      <div class="input-group mb-3 align-items-center">
+        <label for="phone" class="form-label mx-2">phone</label>
+        <input id="phone" type="tel" class="form-control" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+      </div>
+      <div>
+        <input class="btn btn-primary " type="submit" value="Insert">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Filter --}}
+  <form class="row" action="" method="POST">
+    <div class="col-md-6 col-sm-10">
+      <div class="input-group my-3 align-items-center">
+        <label for="search" class="form-label mx-2">Search By</label>
+        <select id="search" class="form-select form-control mx-2" aria-label="Default select example">
+          <option selected value="customerId">Search By</option>
+          <option value="name">name</option>
+        </select>
+        <input type="text" class="form-control mx-2" name="searchKeyword">
+        <input class="btn btn-outline-primary mx-2" type="submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+  {{!-- Table --}}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">customer_id</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">1</th>
+        <td>Batman</td>
+        <td>batman@batmail.com</td>
+        <td>111-555-8888</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Superman</td>
+        <td>superman@supermail.com</td>
+        <td>222-333-4444</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Spiderman</td>
+        <td>spiderman@spidermail.com</td>
+        <td>777-888-9999</td>
+        <td><button class="btn btn-secondary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
